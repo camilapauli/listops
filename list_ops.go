@@ -26,18 +26,14 @@ func (il IntList) Reverse() IntList {
 
 //Append items from a list in the constructor list
 func (il IntList) Append(originalList IntList) IntList {
-	for _, item := range originalList {
-		il = append(il, item)
-	}
+	il = append(il, originalList...)
 	return il
 }
 
 //Concat items from a list of lists in the constructor list
 func (il IntList) Concat(list []IntList) IntList {
 	for _, items := range list {
-		for _, item := range items {
-			il = append(il, item)
-		}
+		il = il.Append(items)
 	}
 	return il
 }

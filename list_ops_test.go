@@ -98,7 +98,7 @@ func TestFold(t *testing.T) {
 
 }
 
-func ExampleFoldl() {
+func ExampleIntList_Foldl() {
 	testCase := foldTestCases[2]
 	list := testCase.list
 	fn := testCase.fn
@@ -107,7 +107,7 @@ func ExampleFoldl() {
 	// Output: -10
 }
 
-func ExampleFoldr() {
+func ExampleIntList_Foldr() {
 	testCase := foldTestCases[6]
 	list := testCase.list
 	fn := testCase.fn
@@ -152,7 +152,7 @@ func TestFilterMethod(t *testing.T) {
 	}
 }
 
-func ExampleFilter() {
+func ExampleIntList_Filter() {
 	testCase := filterTestCases[1]
 	list := IntList(testCase.list)
 	fn := testCase.fn
@@ -192,7 +192,7 @@ func TestLengthMethod(t *testing.T) {
 	}
 }
 
-func ExampleLength() {
+func ExampleIntList_Length() {
 	testCase := lengthTestCases[1]
 	list := testCase.list
 	fmt.Println(list.Length())
@@ -234,7 +234,7 @@ func TestMapMethod(t *testing.T) {
 	}
 }
 
-func ExampleMap() {
+func ExampleIntList_Map() {
 	testCase := mapTestCases[1]
 	list := IntList(testCase.list)
 	fn := testCase.fn
@@ -274,7 +274,7 @@ func TestReverseMethod(t *testing.T) {
 	}
 }
 
-func ExampleReverse() {
+func ExampleIntList_Reverse() {
 	testCase := reverseTestCases[1]
 	list := IntList(testCase.list)
 	fmt.Println(list.Reverse())
@@ -323,7 +323,7 @@ func TestAppendMethod(t *testing.T) {
 	}
 }
 
-func ExampleAppend() {
+func ExampleIntList_Append() {
 	testCase := appendTestCases[2]
 	list := IntList(testCase.list)
 	appendList := testCase.appendThis
@@ -365,7 +365,7 @@ func TestConcatMethod(t *testing.T) {
 	}
 }
 
-func ExampleConcat() {
+func ExampleIntList_Concat() {
 	testCase := concatTestCases[1]
 	list := IntList(testCase.list)
 	args := testCase.args
